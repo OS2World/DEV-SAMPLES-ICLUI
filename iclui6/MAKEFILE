@@ -1,0 +1,3 @@
+dm.exe : dm.cpp dm.hpp
+	icc /Q /B/PM:PM /O /Ft- /Tdp dm.cpp cppooc3i.lib cppom30i.lib
+

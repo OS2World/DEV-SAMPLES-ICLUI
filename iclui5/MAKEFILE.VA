@@ -1,0 +1,2 @@
+dm.exe : dm.cpp dm.hpp
+	icc /Q /B/BATCH /B/PM:PM /Ft- /Tdp /O /G5 dm.cpp CPPOM30I.LIB CPPON30I.LIB CPPOOC3I.LIB

@@ -1,0 +1,14 @@
+
+all : handler1.exe handler2.exe handler3.exe
+
+handler1.exe : handler1.cpp
+	icc /Q /Tdp /B/PM:PM /B/BATCH /Ti handler1.cpp dde4muii.lib dde4cci.lib
+	rc -x dialog.res handler1.exe >nul
+
+handler2.exe : handler2.cpp
+	icc /Q /Tdp /B/PM:PM /B/BATCH /Ti handler2.cpp dde4muii.lib dde4cci.lib
+
+handler3.exe : handler3.cpp
+	icc /Q /Tdp /B/PM:PM /B/BATCH /Ti handler3.cpp dde4muii.lib dde4cci.lib
+	rc -x dialog.res handler3.exe >nul
+
