@@ -1,0 +1,31 @@
+#include <os2.h>
+#include "kalender.h"
+
+MENU KALENDER
+BEGIN
+        SUBMENU "Kalender", MI_KALENDER
+        BEGIN
+                MENUITEM "~n„chste Woche\tCtrl+N", MI_VOR
+                MENUITEM "~vergangene Woche\tCtrl+V", MI_RUECK
+                MENUITEM SEPARATOR
+                MENUITEM "Termin ~erfassen ...\tCtrl+E", MI_NEU
+                MENUITEM SEPARATOR
+                MENUITEM "Beenden\tAlt+F4", SC_CLOSE, MIS_SYSCOMMAND
+        END
+END
+
+ACCELTABLE KALENDER
+BEGIN
+        "v", MI_RUECK, CHAR, CONTROL
+        "n", MI_VOR, CHAR, CONTROL
+        "e", MI_NEU, CHAR, CONTROL
+END
+
+STRINGTABLE
+BEGIN
+        KALENDER "menu des Kalenders"
+        MI_VOR "zeigt die n„chste Woche"
+        MI_RUECK "zeigt die vergangene Woche"
+        MI_NEU "startet die Erfassung eines Termines"
+        SC_CLOSE "beendet das Program"
+END

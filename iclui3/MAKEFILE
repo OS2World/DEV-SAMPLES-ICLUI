@@ -1,0 +1,7 @@
+
+inst.exe : inst.obj
+	icc /Q /Ti /Tdp /Ft- /Gm inst.obj /B/BATCH /B/PM:PM dde4muii.lib dde4cci.lib
+
+inst.obj : inst.cpp inst.hpp
+	icc /Q /Ti /Tdp /Ft- /Gm /C inst.cpp
+
