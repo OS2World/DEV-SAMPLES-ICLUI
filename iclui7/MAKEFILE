@@ -1,0 +1,14 @@
+all : bsp1.exe bsp2.exe bsp3.exe bsp4.exe
+
+bsp1.exe : bsp1.cpp
+	icc /Q /B/PM:PM /O /Ft- /Tdp bsp1.cpp cppooc3i.lib cppom30i.lib
+
+bsp2.exe : bsp2.cpp
+	icc /Q /B/PM:PM /O /Ft- /Tdp bsp2.cpp cppooc3i.lib cppom30i.lib
+
+bsp3.exe : bsp3.cpp
+	icc /Q /B/PM:PM /O /Ft- /Tdp bsp3.cpp cppooc3i.lib cppom30i.lib
+
+bsp4.exe : bsp4.cpp
+	icc /Q /O /Ft- /Tdp bsp4.cpp cppooc3i.lib cppom30i.lib
+
